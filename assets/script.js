@@ -1,4 +1,4 @@
-
+var userInput = "5"
 var settingsWikiHow = {
 	"async": true,
 	"crossDomain": true,
@@ -7,9 +7,16 @@ var settingsWikiHow = {
 	"headers": {
 		"x-rapidapi-host": "hargrimm-wikihow-v1.p.rapidapi.com",
 		"x-rapidapi-key": "d8ec69564cmsh8bfdd3439a39718p14736fjsn7795f327adcd"
-    }}
-var userInput = 5//$("#userInputBox"); //set this equal to the textbox when it exists again // #10-25
 
+	}};
+
+	$.ajax(settingsWikiHow ).done(function (response) {
+		console.log(response);
+		  // $("#Tod").append(response);
+});
+
+
+$("#userInputBox"); //set this equal to the textbox when it exists again // #10-25
 var drinksApiInput; //this is the var that goes into the drinksAPI
 
 var settings = {
@@ -27,21 +34,30 @@ var settings = {
 $.ajax(settings).done(function (response) {
     console.log(response);
 
+
    //... $("#Tod").append(response);
+
+	console.log(response.drinks[userInput]); 
+ 
 
 });
 
 
 
     
-    
-
-    //access the drink ingredients list
-    // append that to the page too
+//append the drink to the page
 
 
+//     //access the drink ingredients list
+//     // append that to the page too
 
-//click event for button
+<<<<<<< HEAD
+
+=======
+// });
+>>>>>>> master
+
+// //click event for button
 //var userInput = 
 //var wikiHowAPI =
 //var drinksAPI=
