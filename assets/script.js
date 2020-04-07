@@ -1,4 +1,4 @@
-var userInput = 5//$("#userInputBox"); //set this equal to the textbox when it exists again // #10-25
+var userInput = 5//$("#userInputBox"); //set this equal to the textbox when it exists again // #1-25
 
 var drinksApiInput; //this is the var that goes into the drinksAPI
 
@@ -23,3 +23,13 @@ $.ajax(settings).done(function (response) {
     // append that to the page too
 
 });
+
+//click event for button
+//var userInput = 
+//var wikiHowAPI =
+//var drinksAPI=
+//function for wikihow: DO you want an alcoholic or non-alcoholic drink---button 
+// var alcohol = true
+// var alcohol = false 
+//event.prevetDefault
+//function for drinks--if its true 
