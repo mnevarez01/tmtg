@@ -1,6 +1,17 @@
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+
+  
+  .figure {
+      inline-size: auto;
   }
+  .columns {
+      background-color: black;
+  }
+.title {
+    color: yellow;
+    display: inline-block;
+}
+.wrapper {
+background-color: black;
+color: orange;
+text-align: center;
+}
