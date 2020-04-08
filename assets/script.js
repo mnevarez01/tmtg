@@ -1,5 +1,6 @@
 
 
+
 $("#run-everything-button").on("click", function (event) {
     event.preventDefault;
     var userInput = $("#input").val();
@@ -22,6 +23,17 @@ function wikiHow(userInput) {
         $("#wikiHow").append(response);
     });
 };
+
+
+
+
+
+
+
+
+
+
+
 
 
 
