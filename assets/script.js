@@ -1,10 +1,12 @@
 var userInput = 5//$("#userInputBox"); //set this equal to the textbox when it exists again // #1-25
 var drinksApiInput; //this is the var that goes into the drinksAPI
 
+var userInput = $("#input")
+
 var settingsWikiHow = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://hargrimm-wikihow-v1.p.rapidapi.com/steps?count="+userInput,
+	"url": "https://hargrimm-wikihow-v1.p.rapidapi.com/steps?count=" + userInput,
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "hargrimm-wikihow-v1.p.rapidapi.com",
@@ -12,33 +14,24 @@ var settingsWikiHow = {
 				
 	}};
 
-	var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://the-cocktail-db.p.rapidapi.com/filter.php?a=Alcoholic", //there's no documentation for this
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
-		"x-rapidapi-key": "788f0dc8b3mshe5269bb15e31ff2p135077jsn86a8de28e359"
 
-	}
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-
-   // $("#Tod").append(response);
-   console.log(response.drinks[userInput]) //append the drink to the page
-   
-   //access the drink ingredients list
-   // append that to the page too
-});
-
-    
-    
+	$.ajax(settingsWikiHow).done(function (response) {
+		console.log(response);
+		// $("#Tod").append(response);
+	});
 
 
-//click event for button
+	$("#userInputBox"); //set this equal to the textbox when it exists again // #10-25
+	var drinksApiInput; //this is the var that goes into the drinksAPI
+
+
+
+
+
+
+
+
+// //click event for button
 //var userInput = 
 //var wikiHowAPI =
 //var drinksAPI=
@@ -47,3 +40,5 @@ $.ajax(settings).done(function (response) {
 // var alcohol = false 
 //event.prevetDefault
 //function for drinks--if its true 
+
+

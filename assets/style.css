@@ -1,3 +1,17 @@
---background 
---will it change with what is displayed \
---text font awesome to call to it in our divs
+
+  
+  .figure {
+      inline-size: auto;
+  }
+  .columns {
+      background-color: black;
+  }
+.title {
+    color: yellow;
+    display: inline-block;
+}
+.wrapper {
+background-color: black;
+color: orange;
+text-align: center;
+}
