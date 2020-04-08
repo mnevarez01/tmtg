@@ -1,6 +1,7 @@
 var userInputBoxEl = $("#input"); //set this equal to the textbox when it exists again // #10-25
 var drinkTextEl = $("#cocktail-code");
-var drinkImageEl = $("#drinksAPI")
+var drinkImageEl = $("#drink-image");
+var runEverythingButton = $("#run-everything-button"); //We need to change this to the actual button when it exists
 
 var drinksApiInput; //this is the var that goes into the drinksAPI
 var settings = {
@@ -16,20 +17,14 @@ var settings = {
 }
 
 $.ajax(settings).done(function (response) {
-    console.log(response);
 
-    userInputBoxEl.on("click", function(){
-    
-    var drinkPicker = $("#input").val();
-    var drinkImage = $("<img>").attr("src", response.drinks[drinkPicker].strDrinkThumb)
+    runEverythingButton.on("click", function(){
+    var drinkPicker = $("#input").val();//gets the number from the input box
+    var drinkImage = $("<img>").attr("src", response.drinks[drinkPicker].strDrinkThumb);
     var drinkName = response.drinks[drinkPicker].strDrink;
 
-    console.log(drinkName);
-
-    drinkTextEl.text(`You did it! Go make yourself a ${drinkName}`)
-    drinkImageEl.attr;
-    drinkImageEl.append(drinkImage);
-    
+    drinkTextEl.text(`You did it! Go make yourself a ${drinkName}`);
+    drinkImageEl.html(drinkImage); 
     })
 });
 
