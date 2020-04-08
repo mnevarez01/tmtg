@@ -1,4 +1,6 @@
-
+.hero{
+    background-color: black;
+}
   
   .figure {
       inline-size: auto;
@@ -14,4 +16,10 @@
 background-color: black;
 color: orange;
 text-align: center;
+}
+
+#inputField{
+    width: 56%;
+    padding-left: 45%;
+    color: red;
 }
