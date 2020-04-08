@@ -21,8 +21,6 @@ var settingsWikiHow = {
 	});
 
 
-	$("#userInputBox"); //set this equal to the textbox when it exists again // #10-25
-	var drinksApiInput; //this is the var that goes into the drinksAPI
 
 
 
