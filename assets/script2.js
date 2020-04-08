@@ -30,5 +30,27 @@ $.ajax(settings).done(function (response) {
 
 
 
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~console.log art
+var art1 = "xxxxxxxx                     xxxxx          x          x                     xxxxx          x"
+var art2 = "x      x  x   x         xxxx x   x  xxxxx   x             xxxxx  xxxx  xxxx  x   x  xxxxx   x"
+var art3 = "x      x  x   x  xxxx   x    xxxxx  x   x  xxx  xxxx   x  x   x  x   x    x  xxxxx  x   x  xxx"
+var art4 = "x      x  x   x  x  x   x    x      x   x   x   x  x   x  x   x  x   x    x  x      x   x   x"
+var art5 = "xxxxxxxx  xxxxx  xxxxx  x    xxxxx  x   x   x   xxxxx  x  x   x  x        x  xxxxx  x   x   x"
+var art6 = "       x             "
+var art7 = "       x  "
+
+console.log(art1)
+console.log(art2)
+console.log(art3)
+console.log(art4)
+console.log(art5)
+console.log(art6)
+console.log(art7)
+
+
+
+
+
 //     //access the drink ingredients list // optional
 //     // append that to the page too
