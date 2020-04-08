@@ -28,14 +28,14 @@ $.ajax(settings).done(function (response) {
     console.log(response);
 
    // $("#Tod").append(response);
+   console.log(response.drinks[userInput]) //append the drink to the page
+   
+   //access the drink ingredients list
+   // append that to the page too
 });
 
     
     
-    console.log(response.drinks[userInput]) //append the drink to the page
-
-    //access the drink ingredients list
-    // append that to the page too
 
 
 //click event for button
