@@ -1,32 +1,27 @@
 
-var userInput = $("#input")
 
-var settingsWikiHow = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://hargrimm-wikihow-v1.p.rapidapi.com/steps?count=" + userInput,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "hargrimm-wikihow-v1.p.rapidapi.com",
-		"x-rapidapi-key": "d8ec69564cmsh8bfdd3439a39718p14736fjsn7795f327adcd"
+$("#run-everything-button").on("click", function (event) {
+    event.preventDefault;
+    var userInput = $("#input").val();
+    wikiHow(userInput);
+})
 
-
-	}
+function wikiHow(userInput) {
+    console.log(userInput)
+    $.ajax({
+        async: true,
+        crossDomain: true,
+        url: "https://hargrimm-wikihow-v1.p.rapidapi.com/steps?count=" + userInput,
+        method: "GET",
+        headers: {
+            "x-rapidapi-host": "hargrimm-wikihow-v1.p.rapidapi.com",
+            "x-rapidapi-key": "d8ec69564cmsh8bfdd3439a39718p14736fjsn7795f327adcd"
+        }
+    }).done(function (response) {
+        console.log(response);
+        $("#wikiHow").append(response);
+    });
 };
-
-
-$.ajax(settingsWikiHow).done(function (response) {
-	console.log(response);
-	// $("#Tod").append(response);
-});
-
-
-$("#userInputBox"); //set this equal to the textbox when it exists again // #10-25
-var drinksApiInput; //this is the var that goes into the drinksAPI
-
-
-
-
 
 
 
