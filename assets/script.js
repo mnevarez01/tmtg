@@ -1,3 +1,8 @@
+$("#close-button").on("click", function (event) {
+	event.preventDefault;
+	$(".modal").hide("fold", { direction: "down" }, "slow")
+})
+
 $("#run-everything-button").on("click", function (event) {
 	event.preventDefault;
 	var userInput = $("#input").val();
@@ -29,8 +34,9 @@ function wikiHow(userInput) {
 			$("#wikiHow").append(item);
 
 		}
-		var button = $("<button>").text("All done? Now lets get a drink!").addClass("drinks-button")
-		$("#wikiHow").append(button);
+		var button = $("<button>").text("All done? Now lets get a drink!")
+		$("#wikiHow").append(button).addClass("drinks-button yellow-btn");
+		$("#first-display").hide("fold", { direction: "down" }, "slow")
 		drinksAPI();
 	});
 };
@@ -68,10 +74,29 @@ function drinksAPI() {
 
 			drinkTextEl.text(`You did it! Go make yourself a ${drinkName}`);
 			drinkImageEl.html(drinkImage);
+			$("#wikiHow").hide("drop", { direction: "down" }, "slow");
 		})
 	});
 
 }
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~console.log art
+var art1 = "xxxxxxxx                     xxxxx          x          x                     xxxxx          x"
+var art2 = "x      x  x   x         xxxx x   x  xxxxx   x             xxxxx  xxxx  xxxx  x   x  xxxxx   x"
+var art3 = "x      x  x   x  xxxx   x    xxxxx  x   x  xxx  xxxx   x  x   x  x   x    x  xxxxx  x   x  xxx"
+var art4 = "x      x  x   x  x  x   x    x      x   x   x   x  x   x  x   x  x   x    x  x      x   x   x"
+var art5 = "xxxxxxxx  xxxxx  xxxxx  x    xxxxx  x   x   x   xxxxx  x  x   x  x        x  xxxxx  x   x   x"
+var art6 = "       x             "
+var art7 = "       x  "
+
+console.log(art1)
+console.log(art2)
+console.log(art3)
+console.log(art4)
+console.log(art5)
+console.log(art6)
+console.log(art7)
+
 
 
 
