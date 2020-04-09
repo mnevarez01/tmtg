@@ -12,11 +12,66 @@
 </head>
 
 <body>
+    <!--modal card-BULMA-->
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card is-black">
+            <header class="modal-card-head">
+                <p class="modal-card-title">COVID Quarantainment:</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <!-- Content ... -->
+                <h3 class="names">What is COVID Quarantainment?</h3>
+                <p>
+                    Due to the hard times we are facing our site is designed to distract the mind.
+                    <br>
+                    We will generate a list of tasks that should be completed before your reward,
+                    <br>
+                    The list might be long but the reward is great!
+                </p>
+                <hr>
+                <h3 class="names">Instructions:</h3>
+                <p> Pick a number from 1-999 to display the number of tasks you want to complete!</p>
+                <p>Once you are done with your tasks get your reward: Which drink you should make!</p>
+                <hr>
+                <h3 class="names">Created by:</h3>
+                <p>
+                    The Sandlot:
+                    <br>
+                    Todd Leslie
+                    <br>
+                    Genet Worku
+                    <br>
+                    Tymothy Sellers
+                    <br>
+                    Maria Nevarez
+                </p>
+                <hr>
+                <h3 class="names">Created with:</h3>
+                <p>Bulma, jquery-ui, Jquery
+                </p>
+
+
+                <hr>
+                <h3 class="names">API</h3>
+                <p>
+                    WikiHow API &
+                    <br>
+                    The Cocktail DB
+                </p>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="close-button" class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+    <!--Header of Page-->
     <section class="hero has-background-black is-large">
         <div class="hero is-centered">
 
             <div class="container">
-                <h1 class="title is-1">Quarantainement</h1>
+                <h1 class="title is-1">COVID Quarantainment:</h1>
                 <figure class="image">
                     <img src="https://cdn.pixabay.com/photo/2016/03/27/17/58/dark-1283298__340.jpg" alt="burn baby">
                 </figure>
@@ -28,16 +83,16 @@
         <div class="columns">
 
             <div class="column is-centered has-text-warning ">
-                <h2>"Are you looking to waste a little time"</h2>
+                <h2>"Bored? We have just what you need!"</h2>
             </div>
 
 
         </div>
+        <!--input field-->
 
-        <div class="column">
+        <div id="first-display" class="column">
             <div id="inputField">
-                <input id="input" class="input is-danger is-centered" type="text"
-                    placeholder="How much time do you want to waste:">
+                <input id="input" class="input is-danger is-centered" type="text" placeholder="Want to waste time?">
             </div>
             <br>
             <a id="run-everything-button" class="button is-warning is-rounded">Click it!</a>
@@ -45,16 +100,19 @@
         <br>
 
         <p>
-            <h2>Pick a number from: </h2>
+            <h2>Pick a number and </h2>
         </p>
 
         <p>
-            <h2>10 to 25. Have some fun!</h2>
+            <h2>have some fun!</h2>
         </p>
+        <!--DIV containing first API: WikiHow-->
 
         <div id="wikiHow" class="hidden">
 
         </div>
+
+        <!--DIV containing second API: Cocktail drinks-->
         <div id="drinksAPI">
             <p id="cocktail-code"></p>
             <p id="drink-image"></p>
