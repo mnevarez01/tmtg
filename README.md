@@ -11,15 +11,15 @@ Once you are done with your tasks get your reward: Which drink you should make!
 ## Sample Images:
 Once you click on Start Here! you will be prompted with this image.
 
-![sample-page](/assets/images/sample-page.png)
+![sample-page](/assets/Images/sample-page.PNG)
 
 You will enter a number in the input field and use the Click It! button.
 
-![sample-page](/assets/images/sample-page2.png)
+![sample-page](/assets/Images/sample-page2.PNG)
 
 Once submitted you will have your tasks and you can go to the next page with All done? Now lets get a drink!
 
-![sample-page](/assets/images/sample-page3.png)
+![sample-page](/assets/Images/sample-page3.PNG)
 
 Final page would be the drink that you should make!
 
