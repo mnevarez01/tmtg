@@ -1,6 +1,6 @@
 $("#close-button").on("click", function (event) {
 	event.preventDefault;
-	$(".modal").hide("fold", { direction: "down" }, "slow")
+	$(".modal").hide("explode")
 })
 
 $("#run-everything-button").on("click", function (event) {
@@ -11,6 +11,7 @@ $("#run-everything-button").on("click", function (event) {
 	$("#input").val("");
 });
 
+//wikiHow API
 function wikiHow(userInput) {
 	console.log(userInput)
 
@@ -36,7 +37,7 @@ function wikiHow(userInput) {
 		}
 		var button = $("<button>").text("All done? Now lets get a drink!")
 		$("#wikiHow").append(button).addClass("drinks-button yellow-btn");
-		$("#first-display").hide("fold", { direction: "down" }, "slow")
+		$("#first-display").hide("puff", { direction: "down" }, "slow")
 		drinksAPI();
 	});
 };
@@ -69,16 +70,25 @@ function drinksAPI() {
 			console.log(response)
 			var numberCap = localStorage.getItem("userInput")
 			var drinkPicker = Math.floor(Math.random() * numberCap);//gets the number from the input box
-			var drinkImage = $("<img>").attr("src", response.drinks[drinkPicker].strDrinkThumb);
+			var drinkImage = $("<img>").attr("src", response.drinks[drinkPicker].strDrinkThumb).addClass("start-again");
 			var drinkName = response.drinks[drinkPicker].strDrink;
 
 			drinkTextEl.text(`You did it! Go make yourself a ${drinkName}`);
-			drinkImageEl.html(drinkImage);
+			drinkImageEl.html(drinkImage)
+			$(".hero").hide("drop", { direction: "down" }, "slow")
 			$("#wikiHow").hide("drop", { direction: "down" }, "slow");
 		})
 	});
 
 }
+
+$("#drink-image").on("click", ".start-again", function () {
+	$(".hero").show();
+	$("#first-display").show();
+	$("#wikiHow").show().empty();
+	$("#cocktail-code, #drink-image").empty();
+
+})
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~console.log art
 var art1 = "xxxxxxxx                     xxxxx          x          x                     xxxxx          x"
@@ -96,19 +106,5 @@ console.log(art4)
 console.log(art5)
 console.log(art6)
 console.log(art7)
-
-
-
-
-
-// //click event for button
-//var userInput = 
-//var wikiHowAPI =
-//var drinksAPI=
-//function for wikihow: DO you want an alcoholic or non-alcoholic drink---button 
-// var alcohol = true
-// var alcohol = false 
-//event.prevetDefault
-//function for drinks--if its true 
 
 
